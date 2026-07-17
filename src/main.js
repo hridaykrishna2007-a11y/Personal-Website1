@@ -1,6 +1,5 @@
-import './style.css'
+const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
-document.querySelector('#app').innerHTML = `
-  <h1>Welcome to My Website</h1>
-  <p>Edit src/main.js to get started</p>
-`
+document.querySelector("#APP").innerHTML = "<p>loading...</p>";
+fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
+.then(response => response.json())
