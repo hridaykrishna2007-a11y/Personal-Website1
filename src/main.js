@@ -21,5 +21,5 @@ then ( response => response.json()).then (data => {
     <p>${data.explanation}</p>`;
 })
 .catch(err => {
-    document.querySelector("#app").innerHTML = '<p>Error:${err.message}</p>';
+    document.querySelector("#app").innerHTML = `<p>Error:${err.message}</p>`;
 });
